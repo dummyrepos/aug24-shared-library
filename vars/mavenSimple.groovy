@@ -1,6 +1,9 @@
 def call() {
     pipeline {
     agent any
+    tools {
+        maven 'MAVEN_3.9.8'
+    }
     stages {
         stage('git'){
             steps {
